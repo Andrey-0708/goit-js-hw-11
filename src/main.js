@@ -7,16 +7,16 @@ import {
 } from './js/render-functions.js';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-import SimpleLightbox from 'simplelightbox';
-import 'simplelightbox/dist/simple-lightbox.min.css';
+// import SimpleLightbox from 'simplelightbox';
+// import 'simplelightbox/dist/simple-lightbox.min.css';
 
 const form = document.querySelector('.form');
 const input = form.querySelector('input[type="text"]');
 
-const lightbox = new SimpleLightbox('.gallery a', {
-  captionsData: 'alt',
-  captionDelay: 250,
-});
+// const lightbox = new SimpleLightbox('.gallery a', {
+//   captionsData: 'alt',
+//   captionDelay: 250,
+// });
 
 form.addEventListener('submit', async event => {
   event.preventDefault();
@@ -49,7 +49,7 @@ form.addEventListener('submit', async event => {
     }
 
     createGallery(data.hits);
-    lightbox.refresh();
+    // lightbox.refresh();
   } catch (error) {
     hideLoader();
     iziToast.error({
